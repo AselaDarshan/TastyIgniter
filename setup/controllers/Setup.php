@@ -28,6 +28,7 @@ class Setup extends Base_Controller {
     }
 
     public function license() {
+        echo 'license page..';
         $data['text_heading'] 		= $this->lang->line('text_license_heading');
         $data['text_sub_heading'] 	= $this->lang->line('text_license_sub_heading');
         $data['setup_step'] 	    = $this->setup_step;

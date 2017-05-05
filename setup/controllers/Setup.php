@@ -23,6 +23,7 @@ class Setup extends Base_Controller {
     }
 
 	public function index() {
+        echo 'setup page index..';
         $this->license();
     }
 

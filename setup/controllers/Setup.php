@@ -23,7 +23,7 @@ class Setup extends Base_Controller {
     }
 
 	public function index() {
-        echo 'setup page index..';
+//        echo 'setup page index..';
         $this->license();
     }
 
@@ -63,19 +63,23 @@ class Setup extends Base_Controller {
         $data['setup_step'] 	    = $this->setup_step;
 
         $data['back_url'] 		        = site_url('license');
-
+        echo 'requirement page';
         if ($this->input->post('requirements')) {
+            echo 'if1';
             if (!in_array(FALSE, $data['requirements'], TRUE) AND !in_array(FALSE, $data['writables'], TRUE)) {
+                echo 'if2';
                 $this->session->set_tempdata('setup_step', 'database', $this->setup_timeout);
                 redirect('database');
             }
-
+            echo 'else12';
             $this->alert->set('danger_now', $this->lang->line('alert_requirement_error'));
         }
 
         if ( ! file_exists(VIEWPATH .'/requirements.php')) {
+            echo 'if3';
             show_404();
         } else {
+            echo 'else3';
             $this->load->view('header', $data);
             $this->load->view('requirements', $data);
             $this->load->view('footer', $data);

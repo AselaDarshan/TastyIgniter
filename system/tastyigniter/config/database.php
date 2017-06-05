@@ -5,9 +5,9 @@ $query_builder = TRUE;
 
 $db['default']['dsn'] = '';
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = 'root';
-$db['default']['database'] = 'resturent';
+$db['default']['username'] = 'asela';
+$db['default']['password'] = 'asela@123';
+$db['default']['database'] = 'resmng';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = 'forsj3vth_';
 $db['default']['pconnect'] = TRUE;
